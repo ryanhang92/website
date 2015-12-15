@@ -1,0 +1,57 @@
+/*This defines the Style for the Navigation Bar links*/
+.nav a {
+    color: #5a5a5a;
+    font-size: 11px;
+    font-weight: bold;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-transform: uppercase;
+}
+
+/*This is using CSS to flatten the nav bar OBJECT PLACEMENT*/
+.nav li {
+    display: inline;
+}
+
+.jumbotron {
+  background-image:url('http://goo.gl/04j7Nn');
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jumbotron .container {
+  position: relative;
+  top:100px;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  font-size: 48px;  
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  font-size: 20px;
+  color: #fff;
+}
+
+
+/*This is the CSS styling for main type objects */
+.main {
+    height:100px:
+    font-size: 30px;
+}
+
+
+/* This defines style for HTML body element*/
+.body {
+    font-family: 
+    font-size:
+    background-color: dimgrey;
+    color: #696969;
+    padding 3px;
+}
