@@ -1,1 +1,497 @@
-Hi I am Ryan
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Import font there is an order of preminence in terms of the import -->
+    <link rel="stylesheet" href = "http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"> <!-- Get ride of the slashes in the director -->
+    <link rel="stylesheet" href = "css/site.css"> 
+    <link rel="stylesheet" href = "css/bootstrap-social.css"> 
+    <link rel="stylesheet" href = "css/reset.css"> 
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Include the core AngularJS library -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>    
+    <!-- Include the AngularJS routing library -->
+    <script src="https://code.angularjs.org/1.2.28/angular-route.min.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+
+
+<body ng-app="mySite" id="top" data-spy="scroll" data-target=".navbar" data-offset="42">
+
+    <!-- Navigation bar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" id="home">
+      <ul class="nav">
+        <li><a class="brand scroll-to" href="#top"> Ryan Hang </a> <!--This correctly does to the top! -->
+        <li><a class="scroll-to" href="#top">Home</a></li>
+        <li><a class="scroll-to" href="#about">About Me</a></li>
+        <li><a class="scroll-to" href="#passion">Passion</a></li>
+        <li><a class="scroll-to" href="#projects">Projects</a></li>
+        <li><a class="scroll-to" href="#fun">Contact</a></li>
+      </ul>
+    </div>
+
+
+    <!-- Jumobtron Panel first sight -->
+    <div class = "jumbotron">
+      <div class = "container">
+        <div class = "text-box">
+          <h1>Ryan Hang</h1>
+          <h2>Part-time Political Scientist. Part-time Programmer.</h2>
+          <!-- I like to learn! -->
+        </div>
+      </div>
+   </div>
+
+
+    <!-- About first text -->
+    <div class = "landing-page" id="about">
+       <div class = "container">
+
+          <div class = "text-box">
+            <h1> Hi, my name is Ryan! </h1>
+            <h2> Welcome to my website! </h2>
+            <h2> Here are some pictures of me in action! </h2>
+          </div>
+
+          <!-- Fun Intro-->
+            <div class="pusheen-panel">
+                  <div class = "col-md-4">
+                      <div class = "thumbnail">
+                        <h2> Learning </h2>
+                         <img src="https://s-media-cache-ak0.pinimg.com/originals/d8/ac/a5/d8aca537aa0dda35c694b5979713537e.gif" class="pusheen-pic">
+                      </div>     
+                 </div> 
+
+                  <div class = "col-md-4">
+                      <div class = "thumbnail">
+                         <h2> Eating </h2>
+                         <img src="http://cdn0.dailydot.com/uploaded/images/original/2014/8/18/pusheen.gif" class="pusheen-pic">
+                      </div>
+                  </div>
+            
+                  <div class = "col-md-4">
+                      <div class = "thumbnail">
+                         <h2> Sleeping </h2>
+                         <img src="https://s-media-cache-ak0.pinimg.com/originals/11/d3/f0/11d3f0106af9feb5435224463774faad.jpg" class="pusheen-pic">
+                      </div>
+                  </div>
+            </div>
+
+      </div>
+    </div>
+
+
+<!-- Passions -->
+  <div class= "passion-panel" id="passion">
+    <div class="container">
+
+      <h1> What interests me? </h1>
+
+            <div class = "col-md-4"> 
+              <h2> Political Science and Security </h2>
+              <img class="img-circle"  src="https://www.awm.gov.au/images/collection/items/ACCNUM_SCREEN/EKN/67/0130/VN.JPG">
+                  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Learn More</button>
+                  <!-- Modal -->
+                  <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+                    <!--Getting rid of the head eliminates the line -->
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-body">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          I draw my interest in security from my parents, who were both refugees from civil conflict in South-East asia. 
+                          I combined stories that my parents passed down to me with my reading of military history to form my first academic interest.
+                          In the future I hope to understand the causes and solutions to conflict. 
+                        </div>
+                      </div>
+                    </div>
+                  </div> 
+            </div>
+
+
+            <div class = "col-md-4"> 
+              <h2> Math and Computer Science </h2> 
+              <img class="img-circle"  src="http://www.atomicheritage.org/sites/default/files/richard-feynman.jpg">
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Learn More</button>
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" role="dialog">
+                  <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        My interest in Math and Computer Science didn't develop until college. Early on I struggled significantly with
+                        technical subjects, but drawn towards them by their explantory power over natural phenomenoa. In this stage of my 
+                        life I trying to learn as much as I can about Math and Computer Science! 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+      
+
+           <div class = "col-md-4"> 
+              <h2> Online Education and Teaching </h2>
+              <img class="img-circle" src= "http://www.philosophy.ox.ac.uk/__data/assets/image/0018/21744/John_Locke_Lecture_TT11_Lecture_1_web.jpg">
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Learn More</button>
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" role="dialog">
+                  <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        Over the past few yearsI have been invovled with a widerange of educational initatives, taught in classrooms, coached competitive debate, and 
+                        actively tutored. I am interested in technological approaches to ensuring every student has the ability to achieve a quality education.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+             </div> 
+            
+                <!--The use of Javascript/Jquery to keep the Modal Centered -->
+                <script>
+                (function ($) {
+                    "use strict";
+                    function centerModal() {
+                        $(this).css('display', 'block');
+                        var $dialog  = $(this).find(".modal-dialog"),
+                        offset       = ($(window).height() - $dialog.height()) / 2,
+                        bottomMargin = parseInt($dialog.css('marginBottom'), 10);
+
+                        // Make sure you don't hide the top part of the modal w/ a negative margin if it's longer than the screen height, and keep the margin equal to the bottom margin of the modal
+                        if(offset < bottomMargin) offset = bottomMargin;
+                        $dialog.css("margin-top", offset);
+                    }
+
+                    $(document).on('show.bs.modal', '.modal', centerModal);
+                    $(window).on("resize", function () {
+                        $('.modal:visible').each(centerModal);
+                    });
+                }(jQuery));
+                </script>
+
+      </div>
+   </div>
+
+
+   <div class="project-panel" id="projects">
+    <div class="container">
+
+      <h1> What have I been working on? </h1>
+      <h2> I have worked on these projects in my journey to teach myself Computer Science! </h2>        
+
+      <!--------------------------------------The First Row Item-------------------------------------- -->
+      <div class="row-fluid">
+        <div class="span12">
+
+              <!-- Complte Carousel Object-->
+              <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                  </ol>
+                 
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+
+                    <div class="item active">
+
+                      <div class="project-thumb">
+                        <div
+                              style="background-image:
+                                     url('http://www.extremetech.com/wp-content/uploads/2015/07/NeuralNetwork.png'); 
+                              width:100%; 
+                              height:150px; 
+                              background-position:center;">&nbsp;</div>
+                        </div>
+
+                      <div class="project-name">
+                          <p>CS61C - Convolutional Neural Network Optimization</p>
+                      </div>
+
+
+                    </div>
+
+                    <div class="item">
+                    <!--This is the left div-->
+                    <div style="width: 50%; float:left">  
+                        <div class="project-thumb">
+                          <div
+                                style="background-image:
+                                       url('http://code-art.azurewebsites.net/content/images/2015/10/code.jpg'); 
+                                width:100%; 
+                                height:150px; 
+                                background-position:center;">&nbsp;</div>
+                          </div>
+                        <div class="project-name">
+                            <p> CS61C - Convolutional Neural Network Optimization </p>
+                        </div>
+
+                    </div>
+
+                   <!--This is the Right div-->
+                  <div style="width: 50%; float:right; background-color:grey">
+                      <div class="text-box">
+                        <p> In the final course of Berkeley's introductory CS series I was apply able with achieve a 5x performance 
+                          speedup of a convolutional neural network trained to identify cats in images without the use of multiple machines.
+                          This project allowed me to tie together my understanding of memory, cache usage, paralleism in computing, how C code is 
+                          compiled into assembly, and other topics in lower-level computing. 
+                    </div>
+                  </div>
+
+
+                    </div>
+                  </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+              </div> <!-- Carousel -->
+
+
+        </div>
+     </div>
+
+      <!--------------------------------------The 2nd Row Item---------------------------------------->
+      <div class="row-fluid">
+        <div class="span12">
+
+              <!-- Complte Carousel Object-->
+              <div id="myCarousel1" class="carousel slide" data-ride="carousel">
+
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                  </ol>
+                 
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+
+                    <div class="item active">
+
+
+                        <div class="project-thumb">
+                          <div 
+                              style="background-image:
+                                     url('http://www.centerforpolitics.org/crystalball/content/images//KDK2015050701-map7.png'); 
+                              width:100%; 
+                              height:150px; 
+                              background-position:center;">&nbsp;</div>
+                        </div>
+
+                      <div class="project-name">
+                          <p> Basic Ballot - Political Sentiment Analyzer </p>
+                      </div>
+
+
+                    </div>
+
+                    <div class="item">
+                    <!--This is the left div-->
+                    <div style="width: 50%; float:left">  
+                        <div class="project-thumb">
+                          <div
+                                style="background-image:
+                                       url('http://code-art.azurewebsites.net/content/images/2015/10/code.jpg'); 
+                                width:100%; 
+                                height:150px; 
+                                background-position:center;">&nbsp;</div>
+                          </div>
+                        <div class="project-name">
+                            <p> Basic Ballot - Political Sentiment Analyzer  </p>
+                        </div>
+
+                    </div>
+
+                   <!--This is the Right div-->
+                  <div style="width: 50%; float:right; background-color:grey">
+                    <div class="text-box">
+                      <p> I built the first protoype of the Political Sentiment Analyzer during my work with Basic Ballot and this was my first attempt
+                        at applying rudimentary machine learning. This project applied Latent Dirichlet Allocation (LDA) and text sentiment analyzers
+                        to dicover how candidates felt about political topics by parsing through a collections of news articles scraped from the web. This 
+                        experience continues to drive my interst in applying Computer Science to political questions. 
+                      </p> 
+                    </div>
+                  </div>
+
+
+                    </div>
+                  </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel1" role="button" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel1" role="button" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+              </div> <!-- Carousel -->
+
+
+        </div>
+     </div>
+
+        <!--------------------------------------The 3rd Row Item-------------------------------------- -->
+      <div class="row-fluid">
+        <div class="span12">
+
+              <!-- Complte Carousel Object-->
+              <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                  </ol>
+                 
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+
+                    <div class="item active">
+
+
+                      <div class="project-thumb">
+                          <div 
+                              style="background-image:
+                                     url('http://i.stack.imgur.com/6RCFr.gif'); 
+                              width:100%; 
+                              height:150px; 
+                              background-position:center;">&nbsp;</div>
+                        </div>
+
+                      <div class="project-name">
+                          <p> CS61B - Graph Implementation </p>
+                      </div>
+
+
+                    </div>
+
+                    <div class="item">
+                    <!--This is the left div-->
+                    <div style="width: 50%; float:left">  
+
+                        <div class="project-thumb">
+                          <div
+                                style="background-image:
+                                       url('http://code-art.azurewebsites.net/content/images/2015/10/code.jpg'); 
+                                width:100%; 
+                                height:150px; 
+                                background-position:center;">&nbsp;</div>
+                          </div>
+
+                        <div class="project-name">
+                            <p> CS61B - Graph Implementation <p>
+                        </div>
+
+                    </div>
+
+                   <!--This is the Right div-->
+                  <div style="width: 50%; float:right; background-color:grey">
+                    <div class="text-box">
+                      <p> Upon finishing a course on Data Structures I was able to implement Kruskal's algorithm to 
+                        find the minimum spanning of a graph. This project allowed me marry my knowledge data structures and algorithms 
+                        and sparked my interest in problem solving through the lens of Computer Science.
+                      </p>
+                    </div>
+                  </div>
+
+
+                    </div>
+                  </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel2" role="button" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel2" role="button" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+              </div> <!-- Carousel -->
+
+
+       </div>
+     </div>
+
+  </div>
+ </div>
+
+
+ <!-- The Final Panel -->
+    <div class="final-panel" id="fun">
+      <div class="container">
+      <h1> Thank you for visiting my website! </h1>
+      <p> If you are interested in learning more about me, please take a copy of my resume! </p>
+      <p> If you ever want to get in contact with me! </p>
+
+      <!--Connection Table-->
+      <div class = "connect-panel">
+
+        <div class="last-comment">
+          <!--   <h2 id="connect-comment"> Here!</h2>  -->     
+       </div>
+
+
+      <div class="social-buttons">
+        <a class="btn btn-info btn-large" href="https://www.google.com">Email me</a>
+        <a class="btn btn-success btn-large" href="https://www.google.com">Resume</a>
+        <a class="btn btn-primary btn-large" href="https://www.google.com">Linked-in</a>
+      </div>
+
+
+      </div>
+  </div>
+
+  <!--Adding script for Carosel-->
+<script>
+    $('.carousel').carousel({
+        interval: 100000
+    })
+</script>
+
+    <!--Importing the other parts of the app does need to be changed  -->
+
+    <script type="text/javascript" src="myFile.js" ></script>
+    <script type="text/javascript" src = "/js/script.js"></script>
+
+    <div ng-view></div>
+
+    <!-- Modules -->
+    <script src="/js/shared/app.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/controllers/HomeController.js"></script>
+    <script src="js/controllers/PhotoController.js"></script>
+
+    <!-- Services -->
+    <script src="js/services/photos.js"></script> 
+
+</body>
+</html>
+
+
+
+
+
