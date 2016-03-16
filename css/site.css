@@ -3,6 +3,10 @@
     border-bottom: 1px solid #5A5A5A;
 }
 
+.navbar .nav {
+    padding-top: 10px; /*Margin top did not work but padding top did work */
+}
+
 .navbar .nav > li {
     font-size: 14px;
     display: inline;
@@ -14,7 +18,7 @@
     display: inline;
 }
 
-.navbar .brand {
+.navbar .nav .brand { /*Be more specific than boot strap override */
     color: #ccc;
     margin-left: 20px; /* was 132 */
     margin-right: 10px;
@@ -46,6 +50,7 @@ html, body {
     background-size: 120% 120%;
     display: inline-block;
     text-align: center;
+    overflow: hidden; /*This FIXED the blur overflow bug! */
 
     }
 
@@ -216,8 +221,31 @@ html, body {
 
 
 /* Modal Controls are here*/
-#myModal {
+
+.passion-panel .container .modal {
+    margin-left: 0;
+}
+
+#myModalSecurity,
+#myModalTech,
+#myModalTeaching,
+#cnnModal,
+#polModal,
+#mapModal,
+#studyModal,
+#yumsterModal,
+#toModal,
+#graphModal,
+#mlModal {
     border-radius: 25px; 
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    float: right;
+    margin-left: 0;
 }
 
 .modal-body
@@ -226,6 +254,9 @@ html, body {
     background: rgba(32,26,22,.1);
     font-color: white;
     border: none;
+    top: 0%;
+    left: 0%;
+    position: relative;
 }
 
 .modal-content
@@ -233,6 +264,10 @@ html, body {
     border-radius: 25px;
     background: rgba(32,26,22,.1);
     border: none;
+    /*Center the content*/
+    top: 0%;
+    position: relative;
+    padding: 10px;
 }
 
 .modal-footer
@@ -289,87 +324,77 @@ html, body {
     overflow: auto;
 }
 
-.project-panel .container {
+.project-panel h1 {
+    text-align: center;
+    color: #5A5A5A;
+    font-size: 60px;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 100;
+    line-height: 150%;
+}
+
+.project-panel h2 {
+    text-align: center;
+    font-weight: 100;
+    font-family: "Titillium Web", sans-serif;
+    color: #5A5A5A;
+}
+
+.project-panel .container-fluid {
     //background: rgba(32,26,22,.7);
     filter: blur(5px);
     min-height: 100%;
     min-width: 100%;
 }
 
-.project-panel h1 {
-    text-align: center;
-    color: #5A5a5a;
-    font-size: 60px;
-    font-family: "Titillium Web", sans-serif;
-    font-weight: 200;
-    line-height: 150%;
-    margin-bottom: -10px;
+.project-imgs > div {
+    height: 250px;
+    background: #fff center center no-repeat;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #220A29;
+    border-radius: 5px;
+    padding: 0px; /*This eliminates the border inside the box*/
 }
 
-.project-panel h2 {
-    text-align: center;
-    font-weight: 200;
-    margin-bottom: 0;
-    font-size: 25px;
-    font: "Titillium Web", sans-serif;
-    color: #5A5A5A;
+.project-thumb {
+    border-radius: 4px;
+    opacity: 0.65;
+    position: relative;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    min-width: 100%;
+    z-index: 0;
+    overflow: auto;
+    background: no-repeat;
+    background-size: cover;
 }
 
-.project-panel p {
-    font-size: 16px;
-    text-align: center;
-    line-height: 1.5;
-    //color: #000;
+.project-thumb:hover {
+    opacity: 100;
 }
 
-.project-panel .row-fluid {
-    margin-top: 30px; /* This pushes down well from the text */
-    border-radius: 25px;
-}
-
-.project-panel .project-thumb {
-   position: relative; 
-   width: 100%; /* for IE 6 */
-   height: 25%;
-}
-
-.project-panel .project-name {
+.project-name {
+    position: absolute;
     background-color: #000;
+    margin: auto;
+    left: 0%;
+    bottom: 0%; /*Can confirm this moved things to the bottom */ 
     width: 100%;
     height: 20%;
+    z-index: 1;
 }
 
-.project-panel .project-name p {
-    color: white;
+.project-name > p {
+    color: #fff;
+    position: relative;
     text-align: center;
-    //margin-top: 13px; /* The caused the space between picture and text */
+    margin-top: 13px;
     font-size: 16px;
     font-family: "Titillium Web", sans-serif;
-}
-
-.project-panel .text-box {
-    padding: 20px;
-    height: 100%
-    text-align: center;
-    background-color: #282224;
-}
-
-.project-panel .text-box p {
-    top: 30%;
-    color: white;
-    font-size: 16px;
-}
-
-/*This maps to all 3 split caption elements*/
-#split-caption1 {
-    top: 30%;
-    text-align: center;
-    background-color: blue;
-}
-
-#split-caption1 p {
-    font-color:red;
-    font-size: 20px;
 }
 
 
