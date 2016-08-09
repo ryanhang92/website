@@ -2,23 +2,17 @@
 <html>
 
 <head>
-    <!-- Import font there is an order of preminence in terms of the import -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type= "text/css" href="css/font-awesome.min.css"> <!-- Get ride of the slashes in the director -->
     <link rel="stylesheet" href = "css/site.css"> 
     <link rel="stylesheet" href = "css/bootstrap-social.css"> 
     <link rel="stylesheet" href = "css/reset.css"> 
-    <link rel="stylesheet" href = "css/bootstrap.css"> 
-    <link rel="stylesheet" href = "css/bootstrap.min.css"> 
     <link rel="stylesheet" href = "css/bootstrap-responsive.css"> 
-
-    <!-- Include the core AngularJS library -->
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
-    <!-- Include the AngularJS routing library -->
-    <script src="https://code.angularjs.org/1.2.28/angular-route.min.js"></script>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.2.28/angular-route.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
 </head>
@@ -38,7 +32,6 @@
       </ul>
     </div>
 
-
     <!-- Jumobtron Panel first sight -->
     <div class = "jumbotron">
       <div class = "container">
@@ -49,7 +42,6 @@
         </div>
       </div>
    </div>
-
 
     <!-- About first text -->
     <div class = "landing-page" id="about">
@@ -88,7 +80,6 @@
       </div>
     </div>
 
-
 <!-- Passions -->
   <div class= "passion-panel" id="passion">
     <div class="container">
@@ -116,7 +107,6 @@
                   </div> 
             </div>
 
-
             <div class = "col-md-4"> 
               <h2> Math and Computer Science </h2> 
               <img class="img-circle" src="img/witty.jpg">
@@ -137,7 +127,6 @@
                 </div>
           </div>
       
-
            <div class = "col-md-4"> 
               <h2> Online Education and Teaching </h2>
               <img class="img-circle" src= "img/feynman_teaching.png">
@@ -157,45 +146,34 @@
                 </div>
              </div> 
            
-
-		  	<script>
+		  <script>
 			$(function() {
 			    function reposition() {
 			        var modal = $(this),
 			            dialog = modal.find('.modal-dialog');
 			        modal.css('display', 'block');
-			        
-			        // Dividing by two centers the modal exactly, but dividing by three 
-			        // or four works better for larger screens.
 			        dialog.css("margin-top", Math.max(0, ($(window).height() - dialog.height()) / 2));
 			    }
-			    // Reposition when a modal is shown
 			    $('.modal').on('show.bs.modal', reposition);
-			    // Reposition when the window is resized
 			    $(window).on('resize', function() {
 			        $('.modal:visible').each(reposition);
 			    });
 			});
-		  	</script>
-
+      </script>
 
       </div>
     </div>
 
     <!-- The Project's Panel -->
 
-    <!-- 
-      Picture not showing bug is due to being hidden behind thing
-    -->
     <div class="project-panel" id="projects">
      <div class="container-fluid">
 
       <h1> What have I been working on? </h1>
       <h2> I have worked on these projects in my journey to teach myself Computer Science! </h2>        
 
-      	<!-- Row 1 -->
+    <!-- Row 1 -->
 		<div class="row-fluid project-imgs">
-
 		  <div class="col-md-7">
 		    <div class="project-thumb" id="CNN" data-target="CNN" style="background-image: url(img/cnn_pic.png)">
         <div class="project-name">
@@ -205,7 +183,6 @@
         </div>
 		    </div>
 		  </div>
-
 		  <div class="col-md-5">
 		    <div class="project-thumb" id="political-analysis" data-target="political-analysis" style="background-image: url(img/electoral.jpg)" >
           <div class="project-name">
@@ -216,9 +193,7 @@
 		    </div>
 		  </div>
 		</div>      
-
-      	<!-- Row 2 --> 
-
+    <!-- Row 2 --> 
 		<div class="row-fluid project-imgs">
 		  <div class="col-md-5">
 		    <div class="project-thumb" id="node-belt" data-target="node-belt" style="background-image: url(img/node.png)">
@@ -229,7 +204,6 @@
           </div>
 		    </div>
 		  </div>
-
 		  <div class="col-md-7">
 		    <div class="project-thumb" id="dashboard" data-target="dashboard" style="background-image: url(img/dash.jpg);">
           <div class="project-name">
@@ -240,58 +214,50 @@
 		  </div>
 		  </div>
 		</div>
-
-      	<!-- Row 3 --> 
-      	<div class="row-fluid project-imgs">
-	      	<div class="col-md-4">
-	      	  <div class="project-thumb" id="yumster" data-target="yumster" style="background-image: url(img/yumster.jpg)">
-              <div class="project-name">
-                <p>
-                Yumster
-                </p>
-              </div>
-	      	  </div>
-	      	</div>
-
-	      	<div class="col-md-4">
-	      	  <div class="project-thumb" id="note-taker" data-target="note-taker" style="background-image: url(img/todo.png)">
-              <div class="project-name">
-                <p>
-                Note Taker/ Recipe Store
-                <p>
-              </div>
-	      	  </div>
-	      	</div>
-
-	      	<div class="col-md-4">
-	      	  <div class="project-thumb" id="graph" data-target="graph" style="background-image: url(img/kruskals.gif)">
-              <div class="project-name">
-                <p>
-                Graph
-                <p>
-              </div>
-	      	  </div>
-	      	</div>
-      	</div>
-
-
-      	<!-- Row 4 -->
-      	<div class="row-fluid project-imgs">
-      	 <div class="col-md-12">
-      		<div class="project-thumb" id="ml" data-target="ml" style="background-image: url(img/ml.png)">
-           <div class="project-name">
+    <!-- Row 3 --> 
+    <div class="row-fluid project-imgs">
+      <div class="col-md-4">
+        <div class="project-thumb" id="yumster" data-target="yumster" style="background-image: url(img/yumster.jpg)">
+          <div class="project-name">
             <p>
-            Machine Learning 
+            Yumster
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="project-thumb" id="note-taker" data-target="note-taker" style="background-image: url(img/todo.png)">
+          <div class="project-name">
+            <p>
+            Note Taker/ Recipe Store
             <p>
           </div>
-         </div>
-       </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="project-thumb" id="graph" data-target="graph" style="background-image: url(img/kruskals.gif)">
+          <div class="project-name">
+            <p>
+            Graph
+            <p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Row 4 -->
+    <div class="row-fluid project-imgs">
+     <div class="col-md-12">
+      <div class="project-thumb" id="ml" data-target="ml" style="background-image: url(img/ml.png)">
+       <div class="project-name">
+        <p>
+        Machine Learning 
+        <p>
+      </div>
      </div>
+   </div>
+ </div>
 
-
-     <!-- Store of of Modals for the Project Thumb Clicks -->
-
-    <!-- T1 Proof of concept it works -->
+  <!-- Store of of Modals for the Project Thumb Clicks -->
     <div class="modal fade" id="cnnModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -306,9 +272,9 @@
 	      speedup of a convolutional neural network trained to identify cats in images, without the use of multiple machines.
 	      This project allowed me to tie together my understanding of memory, cache usage, paralleism in computing, how C code is 
 	      compiled into assembly, and other topics in lower-level computing. 
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+        </div>
+      </div>
+    </div>
 
     <div class="modal fade" id="polModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -324,9 +290,9 @@
 		    at applying rudimentary machine learning. This project applied Latent Dirichlet Allocation (LDA) and text sentiment analyzers
 		    to dicover how candidates felt about political topics by parsing through a collections of news articles scraped from the web. This 
 		    experience continues to drive my interst in applying Computer Science to political questions. 
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+        </div>
+      </div>
+    </div>
 
     <div class="modal fade" id="mapModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -338,9 +304,9 @@
             In response to the spike in crime near the area where I live, I created an incident map alert system with the MEAN Stack.
             This allows users to view and post public saftey alerts to the community, alerts can be queried and searched by attributes 
             such as tag and time.
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+        </div>
+      </div>
+    </div>
 
     <div class="modal fade" id="studyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -352,10 +318,10 @@
           Driven by my classroom teaching experience, I am currently in the process of creating a reddit-esq classroom management tool.
           Built in Django, this application allows students to post questions and recieve feedback. Posts are displayed via a voting system
           and there are moderation controls for the content. Login and authenticaion features are supported and students are able to have 
-	  their own personalized accounts. 
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+	        their own personalized accounts. 
+        </div>
+      </div>
+    </div>
 
     <div class="modal fade" id="yumsterModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -366,9 +332,9 @@
             </div>
             I am currently working with two of my friends on the front end and back end of a project to analyze food recipies and their ingredients
             through machine learning techniques. I help construct the site's layout and navigation system, data displays, login, and admin functionality.
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+        </div>
+      </div>
+    </div>
 
     <div class="modal fade" id="toModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -379,9 +345,9 @@
             </div>
             To-do applications such as SimpleNote play a huge role in my life and drive my productivity. Inspired by the power of such 
             small applications, I endeavored to create my own with the MEAN stack!
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+        </div>
+      </div>
+    </div>
 
     <div class="modal fade" id="graphModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -391,11 +357,11 @@
             <h4 class="modal-title" id="myModalLabel">Kruskal's on a Graph</h4>
             </div>
             Upon finishing a course on Data Structures I was able to implement Kruskal's algorithm to 
-		    find the minimum spanning tree of a graph. This project allowed me marry my knowledge data structures and algorithms 
-		    and sparked my interest in problem solving through the lens of Computer Science.
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+		        find the minimum spanning tree of a graph. This project allowed me marry my knowledge data structures and algorithms 
+		        and sparked my interest in problem solving through the lens of Computer Science.
+        </div>
+      </div>
+    </div>
 
     <div class="modal fade" id="mlModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -408,9 +374,9 @@
             This course of was one of the best learning experiences of my life and convinced me to the potential of MOOCs. In this
             course I implemented classic machine learning techniques such as Linear Regression, Logistics Regression, Neural Nets,
             SVMs, K-means, Collaborative Filtering...and the list goes on! 
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+        </div>
+      </div>
+    </div>
 
 
     <!-- JS and jQuery for modal highlighting -->
@@ -463,9 +429,8 @@
         });
     </script>
 
-        <!-- End of Project Gallery -->
-     </div>
     </div>
+  </div>
 
 
  	<!-- The Final Panel -->
@@ -477,11 +442,8 @@
 
       <!--Connection Table-->
       <div class = "connect-panel">
-
         <div class="last-comment">
-          <!--   <h2 id="connect-comment"> Here!</h2>  -->     
-       </div>
-
+      </div>
 
       <div class="social-buttons">
         <a class="btn btn-info btn-large" href="mailto:ryanhang92@gmail.com">Email me</a>
@@ -490,19 +452,17 @@
         <a class="btn btn-warning btn-large" href="https://github.com/ryanhang92/">GitHub</a>
       </div>
 
-
       </div>
   </div>
 
-  <!--Adding script for Carosel-->
-<script>
-    $('.carousel').carousel({
-        interval: 100000
-    })
-</script>
+    <!--Carosel Script-->
+    <script>
+        $('.carousel').carousel({
+            interval: 100000
+        })
+    </script>
 
     <!--Importing the other parts of the app does need to be changed  -->
-
     <script type="text/javascript" src="myFile.js" ></script>
     <script type="text/javascript" src = "js/script.js"></script>
 
